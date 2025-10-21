@@ -734,9 +734,13 @@ step_apply_custom_gnome_settings() {
   # Desktop Icons NG (DING)
   gsettings set org.gnome.shell.extensions.ding icon-size 'small' || warn "ding icon-size failed"
 
-  # GTK file chooser (GTK3 + GTK4)
-  gsettings set org.gtk.gtk4.settings.file-chooser show-hidden true || warn "gtk4 file-chooser show-hidden failed"
-  gsettings set org.gtk.settings.file-chooser show-hidden true || warn "gtk3 file-chooser show-hidden failed"
+  # GTK3
+  gsettings set org.gtk.Settings.FileChooser show-hidden true || warn "gtk4 file-chooser show-hidden failed"
+  gsettings set org.gtk.Settings.FileChooser sort-directories-first true || warn "gtk4 file-chooser sort-directories-first failed"
+
+  # GTK4
+  gsettings set org.gtk.gtk4.Settings.FileChooser show-hidden true || warn "gtk3 file-chooser show-hidden failed"
+  gsettings set org.gtk.gtk4.Settings.FileChooser sort-directories-first true || warn "gtk3 file-chooser sort-directories-first failed"
 
   ok "GNOME settings applied via gsettings."
 }
