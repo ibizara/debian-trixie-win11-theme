@@ -10,7 +10,9 @@ Give Debian **13 “Trixie”** a polished Windows 11 aesthetic with one script
 > ./install.sh
 > ```
 
----
+## Screenshot
+
+![Desktop – main window](screenshots/desktop.png)
 
 ## ✨ What you get
 
